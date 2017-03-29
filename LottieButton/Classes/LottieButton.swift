@@ -10,7 +10,7 @@ import Foundation
 import SnapKit
 import Lottie
 
-public class LottieButton: UIButton {
+open class LottieButton: UIButton {
 
     public private(set) var animationView: LOTAnimationView?
 
@@ -51,7 +51,7 @@ public class LottieButton: UIButton {
         })
     }
 
-    public func playAnimation() {
+    open func playAnimation() {
         guard let image = self.image(for: .normal) else { return }
         self.playAnimation(withInitialStateImage: image, andFinalStateImage: image)
     }
