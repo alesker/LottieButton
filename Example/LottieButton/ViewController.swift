@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let button = LottieButton()
+        button.animationName = "TwitterHeart"
         // Do any additional setup after loading the view, typically from a nib.
     }
 

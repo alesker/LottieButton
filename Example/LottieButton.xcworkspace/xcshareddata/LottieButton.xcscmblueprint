@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "3CC931439A4DE30F54F17BCB79E835656A257015",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "3CC931439A4DE30F54F17BCB79E835656A257015" : 9223372036854775807,
+    "63600FF07CAC4A2B521A9BCC4448135ABF3B8CB3" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "5CB53025-F86A-4A22-948A-0143511F6E6A",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "3CC931439A4DE30F54F17BCB79E835656A257015" : "LottieButton\/",
+    "63600FF07CAC4A2B521A9BCC4448135ABF3B8CB3" : "lottie-ios\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "LottieButton",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Example\/LottieButton.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:alesker\/LottieButton.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "3CC931439A4DE30F54F17BCB79E835656A257015"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:airbnb\/lottie-ios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "63600FF07CAC4A2B521A9BCC4448135ABF3B8CB3"
+    }
+  ]
+}
