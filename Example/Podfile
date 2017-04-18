@@ -1,10 +1,14 @@
 use_frameworks!
 
 target 'LottieButton_Example' do
+    platform :ios, '8.0'
+
     pod 'LottieButton', :path => '../'
 end
 
 target 'LottieButton_Tests' do
+    platform :ios, '8.0'
+
     pod 'LottieButton', :path => '../'
 
     pod 'Quick'
