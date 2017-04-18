@@ -16,28 +16,29 @@ open class LottieButton: UIButton {
 
     public var animationName: String? {
         didSet {
-            if let animationView = self.animationView {
-                animationView.removeFromSuperview()
-            }
-            self.animationView = LOTAnimationView(name: animationName)
+            self.animationView?.removeFromSuperview()
+            self.animationView = LOTAnimationView(name: animationName, bundle: Bundle(for: type(of: self)))
 
             if let animationView = self.animationView {
-                self.addSubview(animationView)
-                animationView.snp.makeConstraints { make in
-                    make.edges.equalTo(self.imageView!)
-                }
-                animationView.isHidden = true
+                self.add(animationView)
             }
         }
     }
 
-    private func blankImage(for image: UIImage) -> UIImage? {
-        UIGraphicsBeginImageContext(image.size)
+    private func add(_ animationView: LOTAnimationView) {
+        self.addSubview(animationView)
+        animationView.snp.makeConstraints { make in
+            make.edges.equalTo(self.imageView!)
+        }
+        animationView.isHidden = true
+    }
+
+    private func blankImage(for image: UIImage?) -> UIImage? {
+        UIGraphicsBeginImageContext(image?.size ?? .zero)
         let blankImage = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         return blankImage
     }
-
 
     public func playAnimation(withInitialStateImage initialStateImage: UIImage,
                               andFinalStateImage finalStateImage: UIImage) {
