@@ -2,47 +2,23 @@
 
 import Quick
 import Nimble
-import LottieButton
+import Lottie
+@testable import LottieButton
 
-class TableOfContentsSpec: QuickSpec {
+class MockLottieButton: LottieButton {}
+
+class LottieButtonSpec: QuickSpec {
     override func spec() {
-        describe("these will fail") {
-
-            it("can do maths") {
-                expect(1) == 2
-            }
-
-            it("can read") {
-                expect("number") == "string"
-            }
-
-            it("will eventually fail") {
-                expect("time").toEventually( equal("done") )
-            }
+        
+        describe("lottie button") {
+            let lottieButton = MockLottieButton()
             
-            context("these will pass") {
+            context("when setting animation name") {
+                lottieButton.animationName = "TwitterHeart"
+                
+                it("should add animation view") {
+                    expect(lottieButton.subviews.last as? LOTAnimationView).toNot(beNil())
 
-                it("can do maths") {
-                    expect(23) == 23
-                }
-
-                it("can read") {
-                    expect("🐮") == "🐮"
-                }
-
-                it("will eventually pass") {
-                    var time = "passing"
-
-                    DispatchQueue.main.async {
-                        time = "done"
-                    }
-
-                    waitUntil { done in
-                        Thread.sleep(forTimeInterval: 0.5)
-                        expect(time) == "done"
-
-                        done()
-                    }
                 }
             }
         }
