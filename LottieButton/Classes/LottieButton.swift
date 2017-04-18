@@ -46,8 +46,10 @@ open class LottieButton: UIButton {
         self.animationView?.isHidden = false
 
         self.animationView?.play(completion: { completed in
-            self.animationView?.isHidden = true
             self.setImage(finalStateImage, for: .normal)
+            self.animationView?.isHidden = true
+            self.animationView?.pause()
+            self.animationView?.animationProgress = 0
         })
     }
 
